@@ -262,7 +262,7 @@ snoStory <- function(sno) {
     #>>.. |Finding site| specifies the body site affected by a condition.
     if (length(sno$affectedSites)>0 ) {
         ### options for finding site: "is the disease of the "... instead of "that affects"
-        snoOut <- paste0(snoOut, " that affects ", concatTerms(sno$affectedSites), ". ")
+        snoOut <- paste0(snoOut, " that affects the ", concatTerms(sno$affectedSites), ". ")
     } else {
         snoOut <- paste0(snoOut, ". ")
     }

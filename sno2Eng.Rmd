@@ -39,7 +39,7 @@ ui <- fluidPage(
   tags$head(tags$style(".shiny-output-error { visibility: hidden; } and .shiny-output-error:before { visibility: hidden; }")),
   
   # App title ----
-  titlePanel("Sno2Eng: making SNOMED readable"),
+  titlePanel("SNOMEDtxt: making SNOMED readable"),
 
   # Sidebar layout with a input and output definitions ----
   sidebarLayout(
@@ -57,7 +57,7 @@ ui <- fluidPage(
       
       # Main panel for displaying outputs
       mainPanel(  style="overflow-y: auto;" ,
-         h5("Sno2Eng verbalization of SNOMED"),
+         h5("SNOMEDtxt verbalization of SNOMED"),
          wellPanel(style="border:1px inset;border-color:#458cc3;background-color:ghostwhite;padding:0;", 
                 textOutput("sno2Eng")),
          h5("SNOMED original text"),
@@ -77,7 +77,7 @@ ui <- fluidPage(
 server <- function(input, output) {
     
     v <- reactiveValues(data = NULL)
-    v$sno2Eng <- "Sno2Eng will be displayed here"
+    v$sno2Eng <- "SNOMEDtxt will be displayed here"
     v$snoOr <- "Names and relationships listed in SNOMED will be concatenated as they are. "
     v$ref <- "Reference disease description from Medline Plus API will go here."
     
